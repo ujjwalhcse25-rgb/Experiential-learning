@@ -130,7 +130,10 @@
             background-color: #0f172a;
             color: #38bdf8;
         }
-        
+        #packages tr:hover{
+            background-color: #38bdf8;
+            color: #0b0e14;
+        }
         #stats {
             padding: 80px 20px;
             background-color: #0f172a;
