@@ -59,22 +59,56 @@
                 transform: scale(1);
             }
         }
+        #services {
+            padding: 80px 20px;
+            background-color: #0b0e14;
+        }
+        #services h2 {
+            text-align: center;
+            font-size: 40px;
+            color: #38bdf8;
+            margin-bottom: 50px;
+            animation: morphIn 1.35s ease-out forwards;
+        }
         .services-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 5px;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
         .service-card {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 15px;
+            border: 1px solid #334155;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
         }
         .service-title {
-            font-weight: bold;
+            font-size: 24px;
+            font-weight: 700;
+            color: #f8fafc;
         }
-       
+        .service-card  {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 16px;
         }
+        .service-card img {
+            border-radius: 12px;
+            background-color: #334155;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    
+        
     </style>
 </head>
 <body>
@@ -110,22 +144,22 @@
         <h2>Our Services</h2>
         <div class="services-container">
             <div class="service-card">
-                <img src="aeo.jpeg" width="75px" alt="AEO & GEO">
+                <img src="aeo.jpeg" width="75px">
                 <div class="service-title">AEO & GEO</div>
                 <div>Buyers aren't just using Google anymore; they're asking AI. We ensure your brand dominates AI search queries and geo-local results so you never miss a lead.</div>
             </div>
             <div class="service-card">
-                <img src="seo.png" width="75px" alt="SEO">
+                <img src="seo.png" width="75px" >
                 <div class="service-title">SEO</div>
                 <div>We optimize your website's architecture and content to rank #1 on Google and Bing, capturing high-intent organic traffic and turning searches into sales.</div>
             </div>
             <div class="service-card">
-                <img src="ai-implementation.jpeg" width="75px" alt="AI Implementation">
+                <img src="ai-implementation.jpeg" width="75px" >
                 <div class="service-title">AI Implementation</div>
                 <div>We integrate cutting-edge AI tools into your workflows to automate processes, personalize customer interactions, and unlock massive operational efficiency.</div>
             </div>
             <div class="service-card">
-                <img src="paid-media.jpeg" width="85px" alt="Paid Media">
+                <img src="paid-media.jpeg" width="85px" >
                 <div class="service-title">Paid Media</div>
                 <div>We deploy data-driven paid advertising campaigns across major platforms with a relentless focus on lowering your Cost Per Acquisition and maximizing ROI.</div>
             </div>
