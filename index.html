@@ -142,8 +142,54 @@
             color: #94a3b8;
             margin-bottom: 40px;
         }
-        #stats table {
+        #stats .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+        #stats .stat-box {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        #stats .stat-box h2 {
+            font-size: 36px;
+            margin-bottom: 5px;
+            color: #f8fafc;
+        }
+        #stats .stat-box p {
+            margin: 0;
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        #stats .stories-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1200px;
             margin: 0 auto;
+        }
+        #stats .story-box {
+            background-color: #1e293b;
+            padding: 10px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            overflow: hidden;
+            display: flex;
+        }
+        #stats .story-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            #stats .stats-container { grid-template-columns: repeat(2, 1fr); }
+            #stats .stories-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -242,44 +288,31 @@
     <section id="stats">
         <h2>Our Impact</h2>
         <p>"We don't just measure growth; we engineer it."</p>
-        <table cellpadding="20px">
-            <tr align="center">
-                <td>
-                    <h2>500+</h2>
-                    <p>Happy Clients</p>
-                </td>
-                <td>
-                    <h2>₹1.5B+</h2>
-                    <p>Revenue Generated</p>
-                </td>
-                <td>
-                    <h2>98%</h2>
-                    <p>Client Retention</p>
-                </td>
-                <td>
-                    <h2>10x</h2>
-                    <p>Average ROI</p>
-                </td>
-            </tr>
-        </table>
+        <div class="stats-container">
+            <div class="stat-box">
+                <h2>500+</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-box">
+                <h2>₹1.5B+</h2>
+                <p>Revenue Generated</p>
+            </div>
+            <div class="stat-box">
+                <h2>98%</h2>
+                <p>Client Retention</p>
+            </div>
+            <div class="stat-box">
+                <h2>10x</h2>
+                <p>Average ROI</p>
+            </div>
+        </div>
         <h2>Our Success Stories</h2>
-        <table cellspacing="15px">
-            <tbody>
-                <tr>
-                    <td><img src="swigato.jpeg" width="600px"></td>
-                    <td></td>
-                    <td></td>
-                    <td><img src="flipzon.jpeg" width="600px"></td>
-                </tr>
-                <tr></tr>
-                <tr>
-                    <td><img src="stylehub.jpeg" width="600px"></td>
-                    <td></td>
-                    <td></td>
-                    <td><img src="eduleap.jpeg" width="600px"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="stories-container">
+            <div class="story-box"><img src="swigato.jpeg" alt="Swigato"></div>
+            <div class="story-box"><img src="flipzon.jpeg" alt="Flipzon"></div>
+            <div class="story-box"><img src="stylehub.jpeg" alt="Stylehub"></div>
+            <div class="story-box"><img src="eduleap.jpeg" alt="Eduleap"></div>
+        </div>
     </section>
     <section id="contact">
         <h3>Join 10,000+ founders and marketers. Get exclusive growth tactics, AI insights, and industry secrets delivered straight to your inbox every week.</h3>
