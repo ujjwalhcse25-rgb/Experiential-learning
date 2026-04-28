@@ -1,8 +1,31 @@
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => {
+        if (sec.id === sectionId) {
+            sec.style.display = '';
+        } else {
+            sec.style.display = 'none';
+        }
+    });
+}
+
 (function () {
     emailjs.init("t_K0XGwAws2aaD0AA");
 })();
 
 window.onload = function () {
+    // SPA navigation
+    document.querySelectorAll('.nav-link[data-section]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const section = this.getAttribute('data-section');
+            showSection(section);
+        });
+    });
+    // Show home section by default
+    showSection('home');
+
+    // Newsletter form logic
     document.getElementById('newsletter-form').addEventListener('submit', function (event) {
         event.preventDefault();
 
